@@ -1,0 +1,49 @@
+.desktop {
+  padding-top: 12rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 8rem;
+  }
+
+  @media (max-width: em(575)) {
+    padding-top: 5rem;
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    font-size: fluid-font(1.8rem, 1.6rem);
+    line-height: 150%;
+  }
+
+  &__list {
+    list-style: decimal;
+    margin-bottom: 6rem;
+    margin-left: 1.5rem;
+    font-size: fluid-font(2rem, 1.6rem);
+
+    @media (max-width: em(575)) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    line-height: 150%;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__image {
+    max-width: 118rem;
+
+    @media (max-width: em(575)) {
+      display: none;
+    }
+  }
+}

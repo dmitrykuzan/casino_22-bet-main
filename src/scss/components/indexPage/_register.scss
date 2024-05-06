@@ -1,0 +1,103 @@
+.register {
+  padding-top: 14.5rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 10rem;
+  }
+
+  @media (max-width: em(575)) {
+    padding-top: 5rem;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+  }
+
+  &__content {
+    z-index: 2;
+    max-width: 68rem;
+
+    @media (max-width: em(1200)) {
+      max-width: 59rem;
+    }
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    font-size: fluid-font(1.8rem, 1.6rem);
+    line-height: 150%;
+  }
+
+  &__list {
+    list-style: disc;
+    padding-bottom: 5rem;
+    padding-left: 1.5rem;
+    font-weight: 400;
+
+    @media (max-width: em(575)) {
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__button {
+    margin-bottom: 3rem;
+  }
+
+  &__downloads {
+    display: flex;
+    justify-content: space-between;
+    max-width: 37.5rem;
+
+    @media (max-width: em(575)) {
+      justify-content: space-evenly;
+      max-width: initial;
+    }
+
+    @media (max-width: em(460)) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__download {
+    &:not(:last-child) {
+      @media (max-width: em(460)) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: -6.5rem;
+    top: -6.5rem;
+    z-index: 1;
+    max-width: 75rem;
+
+    @media (max-width: em(1200)) {
+      right: 0;
+      top: 0;
+      max-width: 55rem;
+    }
+
+    @media (max-width: em(992)) {
+      display: none;
+    }
+  }
+}

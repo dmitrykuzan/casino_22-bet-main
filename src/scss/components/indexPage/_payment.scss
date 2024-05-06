@@ -1,0 +1,61 @@
+.payment {
+  padding-top: 18rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 10rem;
+  }
+
+  @media (max-width: em(575)) {
+    padding-top: 5rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    margin-right: 2rem;
+    max-width: 58rem;
+
+    @media (max-width: em(992)) {
+      margin-right: initial;
+      max-width: initial;
+    }
+  }
+
+  &__title {
+    padding-bottom: 2.5rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: fluid-font(1.8rem, 1.6rem);
+  }
+
+  &__list {
+    list-style: disc;
+    margin-left: 2.5rem;
+    font-weight: 400;
+    font-size: fluid-font(1.8rem, 1.6rem);
+
+    @media (max-width: em(575)) {
+      margin-left: 1.5rem;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__img {
+    max-width: 50rem;
+    @media (max-width: em(992)) {
+      display: none;
+    }
+  }
+}

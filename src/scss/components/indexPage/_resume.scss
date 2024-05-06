@@ -1,0 +1,75 @@
+.resume {
+  padding-top: 12rem;
+  padding-bottom: 16rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  @media (max-width: em(575)) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 8rem;
+    font-weight: 400;
+    font-size: fluid-font(1.8rem, 1.6rem);
+    line-height: 150%;
+    text-align: center;
+
+    @media (max-width: em(992)) {
+      margin-bottom: 6rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__button-wrapper {
+    margin: 0 auto;
+    max-width: 37.5rem;
+
+    @media (max-width: em(575)) {
+      max-width: initial;
+    }
+  }
+
+  &__button {
+    margin-bottom: 3rem;
+  }
+
+  &__downloads {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: em(575)) {
+      justify-content: space-evenly;
+      max-width: initial;
+    }
+
+    @media (max-width: em(460)) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__download {
+    @media (max-width: em(460)) {
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

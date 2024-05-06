@@ -1,0 +1,111 @@
+.features {
+  padding-top: 12rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 10rem;
+  }
+
+  @media (max-width: em(575)) {
+    padding-top: 5rem;
+  }
+
+  &__title {
+    margin-bottom: 6rem;
+    text-align: center;
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-column-gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: em(992)) {
+      display: block;
+      grid-column-gap: initial;
+    }
+  }
+
+  &__column {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    padding-top: 3rem;
+    padding-right: 4rem;
+    padding-bottom: 7rem;
+    padding-left: 4rem;
+    max-width: 57.5rem;
+    background-color: var(--clr-primary-600);
+    backdrop-filter: blur(50px);
+
+    &--pros,
+    &--cons {
+      &::before {
+        content: "";
+        position: absolute;
+        left: -3rem;
+        top: -4rem;
+        z-index: -1;
+        width: 21rem;
+        height: 20rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(50px);
+      }
+    }
+
+    &--pros {
+      &::before {
+        background-image: url(../img/features/pros.svg);
+      }
+    }
+
+    &--cons {
+      &::before {
+        background-image: url(../img/features/cons.svg);
+      }
+    }
+
+    @media (max-width: em(992)) {
+      min-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+
+        @media (max-width: em(575)) {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    @media (max-width: em(575)) {
+      padding-top: 2rem;
+      padding-right: 1.5rem;
+      padding-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+  }
+
+  &__column-title {
+    margin-bottom: 1.5rem;
+    font-size: fluid-font(4rem, 2.4rem);
+  }
+
+  &__list {
+    list-style: disc;
+    padding-left: 2rem;
+    font-weight: 400;
+    color: var(--clr-default-200);
+  }
+
+  &__item {
+    line-height: 150%;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

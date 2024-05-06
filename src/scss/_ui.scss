@@ -1,0 +1,104 @@
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.title {
+  font-weight: 700;
+  font-size: fluid-font(4.8rem, 3.6rem);
+  line-height: 150%;
+}
+
+.main__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+  width: max-content;
+  min-width: 37.5rem;
+  min-height: 7.2rem;
+  max-width: 48rem;
+  box-shadow: inset 0px 2px 4px rgba(255, 255, 255, 0.25);
+  font-size: 2rem;
+  line-height: 130%;
+  text-align: center;
+  color: var(--clr-default-100);
+  background-image: linear-gradient(
+    97.65deg,
+    #f04c44 27.26%,
+    rgba(255, 255, 255, 0.0677083) 62.98%
+  );
+  background-color: #f04c44;
+
+  transition: background-color var(--transition);
+
+  &:hover {
+    background-color: #ce352d;
+    transition: background-color var(--transition);
+  }
+
+  @media (max-width: em(575)) {
+    min-width: 100%;
+  }
+}
+
+.download {
+  position: relative;
+  border: 0.1rem solid var(--clr-primary-300);
+  border-radius: 0.6rem;
+  padding-top: 1.2rem;
+  padding-right: 2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 6.5rem;
+  max-width: 18rem;
+  font-size: 1.2rem;
+  line-height: 125%;
+  color: var(--clr-default-100);
+  background-color: var(--clr-default-900);
+  transition: border var(--transition);
+
+  span {
+    font-size: 1.6rem;
+    line-height: 125%;
+  }
+
+  &--android,
+  &--ios {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      width: 2.7rem;
+      height: 3.2rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--android {
+    &::before {
+      background-image: url(../img/ui/android.svg);
+    }
+  }
+
+  &--ios {
+    &::before {
+      background-image: url(../img/ui/ios.svg);
+    }
+  }
+
+  &:hover {
+    border: 0.1rem solid #ce352d;
+    transition: border var(--transition);
+  }
+}

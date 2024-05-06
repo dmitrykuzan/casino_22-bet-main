@@ -1,0 +1,7 @@
+.logo {
+  margin-right: 1.5rem;
+  @media (max-width: em(575)) {
+    width: 10rem;
+    height: 3rem;
+  }
+}

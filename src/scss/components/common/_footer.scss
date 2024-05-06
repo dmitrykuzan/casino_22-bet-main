@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  align-items: center;
+  border-top: 0.1rem solid var(--clr-default-300);
+  min-height: 18rem;
+
+  @media (max-width: em(992)) {
+    min-height: 15rem;
+  }
+
+  @media (max-width: em(575)) {
+    min-height: 8rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
